@@ -1,0 +1,56 @@
+<h1>Admin panel</h1>
+<button id='SignOut' (click)='SignOut()'>Sign Out</button>
+
+
+
+<div class='renderedUsers'>
+  <h3>Registered Users/Entities</h3>
+  <div class='table'>
+    <span >Name:</span>
+    <span>Email:</span>
+    <span>Password:</span>
+    
+  </div>
+
+  <div *ngFor="let user of users | async ">
+    <div class='userCard'  >
+      <h2>{{user.name}}</h2>
+      <h2>{{user.email}}</h2>
+      <h2>{{user.password}}</h2>
+      
+      <button class='edit-button' (click)='edit(user.id)' >Edit</button>
+      
+    </div>
+    <div id={{user.id}} class='edit'>
+      <input class="form-control" type="text" #updNickName value={{user.name}}/>
+      <input class="form-control" type="email"  id="emailEdit"  aria-describedby="emailHelp" #updEmail value={{user.email}}/>
+      <input  class="form-control" type="text" #updPassword value={{user.password}}/>
+      <button type='submit' class='submit' (click)='update(updNickName.value, updEmail.value, updPassword.value, user.id)' >Save</button>
+    </div>
+
+  </div>
+</div>
+
+<div class='entity-submit'>
+  <h3>Add new entity</h3>
+  <form>
+    <div class="form-group">
+
+      <label for="nickName">Your Nickname</label>
+      <input type="text" class="form-control" id="nickname" placeholder="Type your Nickname..." #userNickName aria-describedby="nickNameHelp">
+
+    </div>
+    <div class="form-group">
+
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your Email..."  #userEmail aria-describedby="emailHelp">
+
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control"  placeholder="Enter your Password..."  #userPassword id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary"
+      (click)='addEntity(userNickName.value, userEmail.value, userPassword.value)'>Submit</button>
+  </form>
+</div>

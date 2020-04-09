@@ -1,0 +1,142 @@
+h1{
+    display: block;
+    margin: 2vw auto 3vw auto;
+    width: 20vw;
+    font: 600 3vw Montserrat;
+}
+#SignOut{
+    
+        display: block;
+        margin: 2vw auto 2vw auto;
+        background: orange;
+        color: black;
+        font: 600 1.5vw Montserrat;
+        transition: 0.2s;
+        border: none;
+        width: 10vw;
+        height: 3vw;
+        border-radius: 0.52vw;
+        &:hover{
+            background: black;
+            color: white;
+            transition: 0.2s;
+        }
+    
+}
+.renderedUsers{
+    width: 55vw;
+    border: none;
+    background: white;
+    border-radius: 0.52vw;
+    margin: 5vw auto 2vw auto;
+    padding: 2vw;
+    h3{
+        text-align: center;
+        padding: 1vw;
+    }
+    .userCard{
+        display: grid;
+        grid-template-columns: repeat(4, 13vw);
+        
+        background: rgba(10,10,10,0.2);
+        margin: 0.5vw auto 0.5vw auto;
+        border-radius: 0.52vw;
+        h2{
+            font: 400 1vw Montserrat;
+            padding: 0.6vw;
+            margin: 0;
+        }
+        
+    }
+}
+.table{
+        display: grid;
+        grid-template-columns: repeat(4,13vw);
+        padding: 1vw;
+        font: 400 1.5vw Montserrat;
+    
+}
+
+.entity-submit{
+    width: 55vw;
+    border: none;
+    background: white;
+    border-radius: 0.52vw;
+    margin: 5vw auto 2vw auto;
+    padding: 2vw;
+    h3{
+        font: 600 1.3vw Montserrat;
+        text-align: center;
+        margin: 0 0 2vw 0;
+    }
+    h2{
+        text-align: center;
+        margin: 0 0 2vw 0;
+    }
+    label{
+        font: 600 1.3vw Montserrat;
+        margin: 1.4vw 0 1vw 0;
+    }
+    input{
+        height: 3vw;
+        font: 400 1vw Montserrat;
+    }
+    button{
+        display: block;
+        margin: 2vw auto 2vw auto;
+        background: orange;
+        color: black;
+        font: 600 1.5vw Montserrat;
+        transition: 0.2s;
+        border: none;
+        width: 10vw;
+        height: 3vw;
+        &:hover{
+            background: black;
+            color: white;
+            transition: 0.2s;
+        }
+    }
+}
+.edit{
+    display: none;
+}
+.edit-active{
+    display: grid;
+    grid-template-columns: repeat(4, 13vw);
+    border-radius: 0.52vw;
+}
+.edit-button{
+    border: none;
+    background: orangered;
+    transition: 0.2s;
+    color: white;
+    border-radius: 0.52vw;
+    width: 5vw;
+    height: 2vw;
+    font: 400 1vw Montserrat;
+    margin: auto 0 auto 0;
+    &:hover{
+    background: orange;
+    transition: 0.2s;
+    color: black;
+   
+    }
+}
+.submit{
+    border: none;
+    background: navy;
+    transition: 0.2s;
+    color: white;
+    border-radius: 0.52vw;
+    width: 5vw;
+    height: 2vw;
+    font: 400 1vw Montserrat;
+    margin: auto 0 auto 2vw;
+    &:hover{
+    background: rgb(1, 1, 255);
+    transition: 0.2s;
+
+   
+    }
+}

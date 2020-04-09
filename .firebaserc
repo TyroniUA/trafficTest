@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "traffictest-b5609": {
+      "hosting": {
+        "trafficTest": [
+          "traffictest-b5609"
+        ]
+      }
+    }
+  }
+}
